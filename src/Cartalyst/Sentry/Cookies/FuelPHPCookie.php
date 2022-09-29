@@ -82,7 +82,10 @@ class FuelPHPCookie implements CookieInterface {
 	 */
 	public function get()
 	{
-		return json_decode(\Cookie::get($this->getKey()));
+        if($val = \Cookie::get($this->getKey()) != null ) {
+            return json_decode($val);
+        }
+        return null;
 	}
 
 	/**
