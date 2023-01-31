@@ -36,7 +36,7 @@ class ConnectionResolver implements ConnectionResolverInterface {
 	 *
 	 * @var string
 	 */
-	protected $driver;
+	protected $driverName;
 
 	/**
 	 * The table prefix.
